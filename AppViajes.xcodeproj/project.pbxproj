@@ -12,6 +12,8 @@
 		096A8D631E8BA9DB00A8400D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096A8D611E8BA9DB00A8400D /* Main.storyboard */; };
 		096A8D651E8BA9DB00A8400D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096A8D641E8BA9DB00A8400D /* Assets.xcassets */; };
 		096A8D681E8BA9DB00A8400D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096A8D661E8BA9DB00A8400D /* LaunchScreen.storyboard */; };
+		096A8D701E8BB42300A8400D /* DestinosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A8D6F1E8BB42300A8400D /* DestinosCollectionViewCell.swift */; };
+		096A8D731E8BB61D00A8400D /* viajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A8D721E8BB61D00A8400D /* viajes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		096A8D641E8BA9DB00A8400D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		096A8D671E8BA9DB00A8400D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		096A8D691E8BA9DB00A8400D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		096A8D6F1E8BB42300A8400D /* DestinosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinosCollectionViewCell.swift; sourceTree = "<group>"; };
+		096A8D721E8BB61D00A8400D /* viajes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viajes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 			children = (
 				096A8D5D1E8BA9DB00A8400D /* AppDelegate.swift */,
 				096A8D5F1E8BA9DB00A8400D /* ViewController.swift */,
+				096A8D6F1E8BB42300A8400D /* DestinosCollectionViewCell.swift */,
 				096A8D611E8BA9DB00A8400D /* Main.storyboard */,
+				096A8D721E8BB61D00A8400D /* viajes.swift */,
 				096A8D641E8BA9DB00A8400D /* Assets.xcassets */,
 				096A8D661E8BA9DB00A8400D /* LaunchScreen.storyboard */,
 				096A8D691E8BA9DB00A8400D /* Info.plist */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				096A8D601E8BA9DB00A8400D /* ViewController.swift in Sources */,
+				096A8D731E8BB61D00A8400D /* viajes.swift in Sources */,
+				096A8D701E8BB42300A8400D /* DestinosCollectionViewCell.swift in Sources */,
 				096A8D5E1E8BA9DB00A8400D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
