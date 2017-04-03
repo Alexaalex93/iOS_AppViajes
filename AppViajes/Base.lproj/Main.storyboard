@@ -30,8 +30,8 @@
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oyt-1g-dC8" customClass="DestinosCollectionViewCell" customModule="AppViajes" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="25" width="250" height="380"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="oyt-1g-dC8" customClass="DestinosCollectionViewCell" customModule="AppViajes" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="25.5" width="250" height="380"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="380"/>
@@ -47,6 +47,9 @@
                                                             </constraints>
                                                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="heart"/>
+                                                            <connections>
+                                                                <action selector="apretarBotonLike:" destination="oyt-1g-dC8" eventType="touchUpInside" id="JfK-ez-2oa"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.65937560796737671" green="0.65948855876922607" blue="0.65936070680618286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -106,6 +109,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ABv-K7-Tmk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rog-Fu-EaW"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destinos Populares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cov-EZ-I4A">
                                 <constraints>

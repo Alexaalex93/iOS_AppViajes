@@ -17,6 +17,8 @@ class DestinosCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var precioLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
+    var delegate: DestinosCollectionCellDelegate?
+    
     var isLiked: Bool = false {
         didSet{
             if isLiked {
@@ -26,4 +28,12 @@ class DestinosCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+    
+    @IBAction func apretarBotonLike(_ sender: AnyObject) {
+        delegate?.botonLikeApretado(cell: self)
+    }
+
+}
+protocol DestinosCollectionCellDelegate { //Tienes que usar este método si o si como numberofsections...
+    func botonLikeApretado(cell: DestinosCollectionViewCell)
 }
