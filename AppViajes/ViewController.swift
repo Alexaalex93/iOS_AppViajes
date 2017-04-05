@@ -7,21 +7,28 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, DestinosCollectionCellDelegate {
+    
+    //Hay que irse a la raiz del proyecto y en buildPhases en Link Binary with library añadir todos los framewoks que estan en la carpeta de pods/framework/ios
+    
+    //Las keys las sacamos de aqui https://dashboard.back4app.com/classic#/wizard/app-details/3d684eb2-9fdb-4e88-8b16-c1363601c837
+    //Impotamos Parse en el app delegate  
+    
+    
+    /*
+     PFQuery -> Hacer la petición y listar objetos
+        findObjectsInBackground
+        return PFObject
+     */
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
     
-    private var viajes = [Viajes(viajeID: "Paris001", ciudad: "Paris", pais: "Francia", imagenDestacada: UIImage(named: "paris"), precio: 2000, diasTotales: 5, isLiked: false),
-                         Viajes(viajeID: "Roma001", ciudad: "Roma", pais: "Italia", imagenDestacada: UIImage(named: "rome"), precio: 800, diasTotales: 3, isLiked: false),
-                         Viajes(viajeID: "Turquia001", ciudad: "Istanbul", pais: "Turquia", imagenDestacada: UIImage(named: "istanbul"), precio: 900, diasTotales: 5, isLiked: false),
-                         Viajes(viajeID: "Japon001", ciudad: "Kyoto", pais: "Japon", imagenDestacada: UIImage(named: "kyoto"), precio: 1800, diasTotales: 2, isLiked: false),
-                         Viajes(viajeID: "UK001", ciudad: "London", pais: "UK", imagenDestacada: UIImage(named: "london"), precio: 1200, diasTotales: 9, isLiked: false),
-                         Viajes(viajeID: "EEUU001", ciudad: "New York", pais: "EEUU", imagenDestacada: UIImage(named: "newyork"), precio: 600, diasTotales: 1, isLiked: false),
-                         Viajes(viajeID: "Italia001", ciudad: "Santorini", pais: "Italia", imagenDestacada: UIImage(named: "santorini"), precio: 300, diasTotales: 2, isLiked: false),
-                         Viajes(viajeID: "Australia001", ciudad: "Sydney", pais: "Australia", imagenDestacada: UIImage(named: "sydney"), precio: 650, diasTotales: 10, isLiked: false),
-                         Viajes(viajeID: "Suiza001", ciudad: "Zurich", pais: "Suiza", imagenDestacada: UIImage(named: "zurich"), precio: 400, diasTotales: 5, isLiked: false)]
+    
+    
+    private var viajes = [Viajes] ()
     
     
     override func viewDidLoad() {
@@ -40,6 +47,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             flowLayout.itemSize = CGSize(width: 250.0, height: 330.0
             )
         }
+        
+        cargarViajesDedeParse()
         
     }
 
@@ -63,11 +72,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         cell.ciudadLabel.text = viajes[indexPath.row].ciudad
         cell.paisLabel.text = viajes[indexPath.row].pais
-        cell.imageView.image = viajes[indexPath.row].imagenDestacada
+        //cell.imageView.image = viajes[indexPath.row].imagenDestacada
         cell.precioLabel.text = "\(viajes[indexPath.row].precio)"
         cell.diasLabel.text = "\(viajes[indexPath.row].diasTotales)"
         cell.isLiked = viajes[indexPath.row].isLiked
         
+        
+        //Cargar la imagen
+        cell.imageView.image = UIImage()
+        if let featuredImage = viajes[indexPath.row].imagenDestacada {
+            featuredImage.getDataInBackground(block: { (imageData, error) in
+                if let tripImageData = imageData {
+                    cell.imageView.image = UIImage(data: tripImageData)
+                }
+            })
+        }
         cell.layer.cornerRadius = 4.0
         cell.delegate = self
         
@@ -78,8 +97,51 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if let indexPath = collectionView.indexPath(for: cell){
             viajes[indexPath.row].isLiked = viajes[indexPath.row].isLiked ? false : true
             cell.isLiked = viajes[indexPath.row].isLiked
+            
+            //Actualizar la info en Parse
+            viajes[indexPath.row].toPfObject().saveInBackground(block: { (success, error) in
+                if (success) {
+                    print("Se ha convertido correctamente")
+                } else {
+                    print("Error al convertirlo a PFObject")
+                }
+            })
+            //let query = PFQuery(className: "Viaje")
+            //query.clearCachedResult()
         }
     }
-
+    
+    func cargarViajesDedeParse(){
+        viajes.removeAll(keepingCapacity: true)
+        collectionView.reloadData()
+        
+        //Pull de la info en Parse
+        let query = PFQuery(className: "Viaje")
+        query.cachePolicy = PFCachePolicy.cacheElseNetwork //Si no tenemos caché tira de network pero si no lo coge de ahi
+        
+        query.findObjectsInBackground { (objects, error) in
+            if let error = error {
+            print("Error: \(error)")
+            return
+            }
+            
+            if let objects = objects {
+                for(index, object) in objects.enumerated() {
+                    //Parse nos devuelve un PFObject
+                        //Tenemos que convertir  el PFObject a un objeto de nuestra clase Viajes
+                    let viaje = Viajes(pfObject: object) //Creamos el objeto con el inicializador y lo añadimos al array
+                    self.viajes.append(viaje)
+                    
+                    let indexPath = IndexPath(row: index, section: 0)
+                    self.collectionView.insertItems(at: [indexPath])
+                }
+            }
+        }
+    }
+    
+    @IBAction func reloadBtn(_ sender: AnyObject) {
+        cargarViajesDedeParse()
+    }
+    
 }
 

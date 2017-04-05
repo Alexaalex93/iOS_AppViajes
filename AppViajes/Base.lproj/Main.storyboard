@@ -31,7 +31,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="oyt-1g-dC8" customClass="DestinosCollectionViewCell" customModule="AppViajes" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="25.5" width="250" height="380"/>
+                                        <rect key="frame" x="20" y="26" width="250" height="380"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="380"/>
@@ -128,13 +128,26 @@
                                 <color key="textColor" red="0.99990183115005493" green="1" blue="0.99987989664077759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZE-j0-Zwl">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="IWP-Co-ZgC"/>
+                                    <constraint firstAttribute="height" constant="31" id="gdu-5F-iZi"/>
+                                </constraints>
+                                <color key="tintColor" red="0.9586530327796936" green="1" blue="0.97315424680709839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="reload"/>
+                                <connections>
+                                    <action selector="reloadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmK-bk-Wgs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oCh-gu-QgQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4fv-D1-mYX"/>
                             <constraint firstItem="6km-FE-qYH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4jf-AC-x0l"/>
                             <constraint firstItem="Cov-EZ-I4A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Q2-D6-HqM"/>
+                            <constraint firstItem="iZE-j0-Zwl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8Q6-a6-rVH"/>
                             <constraint firstItem="pCk-1Y-zdI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DLU-tn-hhX"/>
+                            <constraint firstItem="iZE-j0-Zwl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ik5-35-NEo"/>
                             <constraint firstItem="oCh-gu-QgQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="L5f-g2-ILa"/>
                             <constraint firstAttribute="trailing" secondItem="6km-FE-qYH" secondAttribute="trailing" id="OIn-IY-Ec7"/>
                             <constraint firstItem="Cov-EZ-I4A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TJO-PM-zCS"/>
@@ -158,5 +171,6 @@
     </scenes>
     <resources>
         <image name="heart" width="128" height="128"/>
+        <image name="reload" width="128" height="128"/>
     </resources>
 </document>

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+//Metemos en didfinishLaunchingWithOptions y cambiamos varias propiedades (Todo esto viene en la documentacion de Parse)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //Configuarcion Parse
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "8WeoOnJ8q0IFNgTWR0cQbkN90P7XaGbHyWMPEAdD"
+            $0.clientKey = "7DgjfqmuJRnTJnr36HTCc2EFpsbpCJxCQOKazPxT"
+            $0.server = "https://parseapi.back4app.com/"
+            //Parse Api Address
+        }
+        Parse.initialize(with: configuration)
+        
         return true
     }
 

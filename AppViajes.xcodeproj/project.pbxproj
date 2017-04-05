@@ -14,9 +14,22 @@
 		096A8D681E8BA9DB00A8400D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096A8D661E8BA9DB00A8400D /* LaunchScreen.storyboard */; };
 		096A8D701E8BB42300A8400D /* DestinosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A8D6F1E8BB42300A8400D /* DestinosCollectionViewCell.swift */; };
 		096A8D731E8BB61D00A8400D /* viajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A8D721E8BB61D00A8400D /* viajes.swift */; };
+		0990FED01E94D64300D97EC9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FECF1E94D64300D97EC9 /* Bolts.framework */; };
+		0990FED21E94D64600D97EC9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FED11E94D64600D97EC9 /* Parse.framework */; };
+		0990FED41E94D64C00D97EC9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FED31E94D64C00D97EC9 /* AudioToolbox.framework */; };
+		0990FED61E94D65400D97EC9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FED51E94D65400D97EC9 /* CFNetwork.framework */; };
+		0990FED81E94D65C00D97EC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FED71E94D65C00D97EC9 /* CoreGraphics.framework */; };
+		0990FEDA1E94D66300D97EC9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FED91E94D66300D97EC9 /* CoreLocation.framework */; };
+		0990FEDC1E94D66D00D97EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FEDB1E94D66D00D97EC9 /* Foundation.framework */; };
+		0990FEDE1E94D67700D97EC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FEDD1E94D67700D97EC9 /* QuartzCore.framework */; };
+		0990FEE01E94D67E00D97EC9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FEDF1E94D67E00D97EC9 /* Security.framework */; };
+		0990FEE21E94D68500D97EC9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FEE11E94D68500D97EC9 /* StoreKit.framework */; };
+		0990FEE41E94D68D00D97EC9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990FEE31E94D68D00D97EC9 /* SystemConfiguration.framework */; };
+		1D1763F36E1238720A78442F /* Pods_AppViajes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092327B3A712416AF12E469B /* Pods_AppViajes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		092327B3A712416AF12E469B /* Pods_AppViajes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppViajes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		096A8D5A1E8BA9DB00A8400D /* AppViajes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppViajes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		096A8D5D1E8BA9DB00A8400D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		096A8D5F1E8BA9DB00A8400D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +39,19 @@
 		096A8D691E8BA9DB00A8400D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		096A8D6F1E8BB42300A8400D /* DestinosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinosCollectionViewCell.swift; sourceTree = "<group>"; };
 		096A8D721E8BB61D00A8400D /* viajes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viajes.swift; sourceTree = "<group>"; };
+		0990FECF1E94D64300D97EC9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
+		0990FED11E94D64600D97EC9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
+		0990FED31E94D64C00D97EC9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0990FED51E94D65400D97EC9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0990FED71E94D65C00D97EC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0990FED91E94D66300D97EC9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0990FEDB1E94D66D00D97EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0990FEDD1E94D67700D97EC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0990FEDF1E94D67E00D97EC9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0990FEE11E94D68500D97EC9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0990FEE31E94D68D00D97EC9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7A1C141D7D6A247314984BEA /* Pods-AppViajes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppViajes.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppViajes/Pods-AppViajes.release.xcconfig"; sourceTree = "<group>"; };
+		ED8C5E85C78CDD8C94E69179 /* Pods-AppViajes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppViajes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppViajes/Pods-AppViajes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +59,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0990FEE41E94D68D00D97EC9 /* SystemConfiguration.framework in Frameworks */,
+				0990FEE21E94D68500D97EC9 /* StoreKit.framework in Frameworks */,
+				0990FEE01E94D67E00D97EC9 /* Security.framework in Frameworks */,
+				0990FEDE1E94D67700D97EC9 /* QuartzCore.framework in Frameworks */,
+				0990FEDC1E94D66D00D97EC9 /* Foundation.framework in Frameworks */,
+				0990FEDA1E94D66300D97EC9 /* CoreLocation.framework in Frameworks */,
+				0990FED81E94D65C00D97EC9 /* CoreGraphics.framework in Frameworks */,
+				0990FED61E94D65400D97EC9 /* CFNetwork.framework in Frameworks */,
+				0990FED41E94D64C00D97EC9 /* AudioToolbox.framework in Frameworks */,
+				0990FED21E94D64600D97EC9 /* Parse.framework in Frameworks */,
+				0990FED01E94D64300D97EC9 /* Bolts.framework in Frameworks */,
+				1D1763F36E1238720A78442F /* Pods_AppViajes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +82,8 @@
 			children = (
 				096A8D5C1E8BA9DB00A8400D /* AppViajes */,
 				096A8D5B1E8BA9DB00A8400D /* Products */,
+				8B0BE19C982FD3217D5F6A83 /* Pods */,
+				8F88EEA342BF13620E166398 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +110,34 @@
 			path = AppViajes;
 			sourceTree = "<group>";
 		};
+		8B0BE19C982FD3217D5F6A83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED8C5E85C78CDD8C94E69179 /* Pods-AppViajes.debug.xcconfig */,
+				7A1C141D7D6A247314984BEA /* Pods-AppViajes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F88EEA342BF13620E166398 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0990FEE31E94D68D00D97EC9 /* SystemConfiguration.framework */,
+				0990FEE11E94D68500D97EC9 /* StoreKit.framework */,
+				0990FEDF1E94D67E00D97EC9 /* Security.framework */,
+				0990FEDD1E94D67700D97EC9 /* QuartzCore.framework */,
+				0990FEDB1E94D66D00D97EC9 /* Foundation.framework */,
+				0990FED91E94D66300D97EC9 /* CoreLocation.framework */,
+				0990FED71E94D65C00D97EC9 /* CoreGraphics.framework */,
+				0990FED51E94D65400D97EC9 /* CFNetwork.framework */,
+				0990FED31E94D64C00D97EC9 /* AudioToolbox.framework */,
+				0990FED11E94D64600D97EC9 /* Parse.framework */,
+				0990FECF1E94D64300D97EC9 /* Bolts.framework */,
+				092327B3A712416AF12E469B /* Pods_AppViajes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 096A8D6C1E8BA9DB00A8400D /* Build configuration list for PBXNativeTarget "AppViajes" */;
 			buildPhases = (
+				E98ACB65FA0AAD7DDC6BAB00 /* [CP] Check Pods Manifest.lock */,
 				096A8D561E8BA9DB00A8400D /* Sources */,
 				096A8D571E8BA9DB00A8400D /* Frameworks */,
 				096A8D581E8BA9DB00A8400D /* Resources */,
+				14DF8CADEF71141F081549F3 /* [CP] Embed Pods Frameworks */,
+				E50837EEF8CFC80B31FEA87B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +208,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14DF8CADEF71141F081549F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppViajes/Pods-AppViajes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E50837EEF8CFC80B31FEA87B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppViajes/Pods-AppViajes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E98ACB65FA0AAD7DDC6BAB00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		096A8D561E8BA9DB00A8400D /* Sources */ = {
@@ -265,9 +384,15 @@
 		};
 		096A8D6D1E8BA9DB00A8400D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED8C5E85C78CDD8C94E69179 /* Pods-AppViajes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NZ9BB45RRX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Parse",
+				);
 				INFOPLIST_FILE = AppViajes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ads.AppViajes;
@@ -278,9 +403,15 @@
 		};
 		096A8D6E1E8BA9DB00A8400D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A1C141D7D6A247314984BEA /* Pods-AppViajes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NZ9BB45RRX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Parse",
+				);
 				INFOPLIST_FILE = AppViajes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ads.AppViajes;
@@ -308,6 +439,7 @@
 				096A8D6E1E8BA9DB00A8400D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
