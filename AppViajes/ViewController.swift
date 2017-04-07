@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, DestinosCollectionCellDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, DestinosCollectionCellDelegate, UIGestureRecognizerDelegate {
     
     //Hay que irse a la raiz del proyecto y en buildPhases en Link Binary with library añadir todos los framewoks que estan en la carpeta de pods/framework/ios
     
@@ -49,8 +49,35 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
         cargarViajesDedeParse()
+    
+        //Swipe Detection
+        let swipeUpRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe)) //lo mismo que #selector()
+        swipeUpRecognizer.direction = .up
+        swipeUpRecognizer.delegate = self
+        self.collectionView.addGestureRecognizer(swipeUpRecognizer)
+        
         
     }
+    
+    func handleSwipe(gesture: UISwipeGestureRecognizer){
+        let point = gesture.location(in: self.collectionView)
+        
+        if(gesture.state == .ended){
+            if let indexPath = collectionView.indexPathForItem(at: point){
+                //Eliminamos la de Parse
+                viajes[indexPath.row].toPfObject().deleteInBackground(block: { (success, error) in
+                    if(success){
+                    print("Viaje eliminado")
+                        self.viajes.remove(at: indexPath.row)
+                        self.collectionView.deleteItems(at: [indexPath])
+                    } else {
+                    print("Error al eliminar")
+                    }
+                })
+            }
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
